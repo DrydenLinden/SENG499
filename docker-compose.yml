@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  facial_gesture_recognition:
+    image: facial_gesture_recognition
+    container_name: facial_gesture_recognition
+    working_dir: /root/facial_gesture_recognition
+    build: .
+    command: python3 gen_test_data.py
+    volumes:
+      - ./output:/root/facial_gesture_recognition/output
+      - ./input:/root/facial_gesture_recognition/input
+    

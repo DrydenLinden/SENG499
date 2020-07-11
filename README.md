@@ -51,3 +51,15 @@ sample number, facial feature, x:y, x:y, ...
 
 Processed data points are currently relative to first data point (x0 - x:y0 - y). Some ideas for other point references, center of cluster (k-means), mean point.
 Could also repfresent points at distance angle from a mean point (could perhaps identify convex or concave curve of mouth)
+
+
+# Docker
+docker compose can be used to launch the application
+There are 2 volumes that are used for the application: input and output
+These volumes allow the container to be run for testing without needing to rebuild it
+
+1) Put files you want to analyze in the input folder
+2) Run docker-compose up
+3) Resulting data.csv file is put in output folder
+
+When code is changed used docker-compose up --build
